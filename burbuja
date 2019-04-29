@@ -1,8 +1,18 @@
 
 import java.io.*;
 
+/**
+ *
+ * @author A18GabrielSM
+ */
 public class burbuja {
 
+    /**
+     *
+     * @param arg Parametros por consola, no se utilizan en este metodo
+     * @throws IOException Devuelve un mensaje de error si no se ingresa un int
+     * para 'tam'
+     */
     public static void main(String arg[]) throws IOException {
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
         System.out.print("\n Ingrese Numero de Datos a Ingresar : ");
@@ -17,10 +27,10 @@ public class burbuja {
             System.out.print("Elemento " + j + " : ");
             arr[i] = Integer.parseInt(in.readLine());
         }
-        Burbuja(arr);
+        burbuja(arr);
     }
 
-    static void Burbuja(int arreglo[]) {
+    static void burbuja(int arreglo[]) {
         for (int i = 0; i < arreglo.length - 1; i++) {
             for (int j = 0; j < arreglo.length - 1; j++) {
                 if (arreglo[j] < arreglo[j + 1]) {
